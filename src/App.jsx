@@ -26,6 +26,7 @@ function App() {
         isLoggedIn={user1.isLoggedIn}
         hobbies={user1.hobbies}
       />
+      <hr />
       {/* user2 객체의 데이터를 props로 전달 */}
       <UserProfile
         name={user2.name}
