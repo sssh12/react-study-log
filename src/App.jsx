@@ -1,13 +1,16 @@
-import Counter from "./components/Counter";
+import { useState } from "react";
+import Timer from "./components/Timer";
 
 function App() {
+  const [showTimer, setShowTimer] = useState(true);
+
   return (
     <div>
-      <h1>State와 useState</h1>
-      <Counter />
-      <hr />
-      {/* 컴포넌트마다 각자 독립적인 state를 가짐 */}
-      <Counter />
+      {/* showTimer가 true일 때만 Timer 컴포넌트를 보여줌 */}
+      {showTimer && <Timer />}
+      <button onClick={() => setShowTimer(!showTimer)}>
+        타이머 보이기/숨기기
+      </button>
     </div>
   );
 }
